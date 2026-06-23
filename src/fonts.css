@@ -1,0 +1,68 @@
+/* FOnts
+*/
+
+
+/* @font-face {
+    font-family: 'Aller Regular';
+    src: url('/fonts/Aller-Regular.woff2') format('woff2'),
+        url('/fonts/Aller-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
+
+
+@font-face {
+    font-family: 'AmsiProNarw Bold';
+    src: url('/fonts/AmsiProNarw-Bold.woff2') format('woff2'),
+        url('/fonts/AmsiProNarw-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AmsiProNarw Light';
+    src: url('/fonts/AmsiProNarw-Light.woff2') format('woff2'),
+        url('/fonts/AmsiProNarw-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AmsiProNarw Light Italic';
+    src: url('/fonts/AmsiProNarw-LightItalic.woff2') format('woff2'),
+        url('/fonts/AmsiProNarw-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AmsiProNarw Regular';
+    src: url('/fonts/AmsiProNarw-Regular.woff2') format('woff2'),
+        url('/fonts/AmsiProNarw-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AmsiProNarw SemiBold';
+    src: url('/fonts/AmsiProNarw-SemiBold.woff2') format('woff2'),
+        url('/fonts/AmsiProNarw-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'AmsiPro Bold';
+    src: url('/fonts/AmsiPro-Bold.woff2') format('woff2'),
+        url('/fonts/AmsiPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

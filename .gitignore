@@ -1,0 +1,6 @@
+/__NOTES
+/node_modules
+/dist
+*.zip
+package-lock.json
+.DS_Store
