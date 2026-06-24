@@ -11,14 +11,14 @@
 
     <div class="responsivePanel"></div>
 
-    <header class="fixed top-0 left-0 w-auto z-50 h-14 flex justify-start items-center  bg-white rounded-br-[20px] gap-x-5 pr-5 transition-all duration-300 ease-in-out"> <!-- w-full -->
+    <header class="fixed top-0 left-0 w-full lg:w-auto z-50 h-14 flex justify-start items-center bg-white/75 backdrop-blur-sm lg:bg-white rounded-br-[20px] gap-x-3 sm:gap-x-5 pr-5 transition-all duration-300 ease-in-out"> <!-- w-full -->
 
         <div class="logo-header-wrapper">
             <img src="/svg/logo-a.svg" class="w-[17px]" alt="Logo Anima">
         </div>
 
         <!-- nav -->
-        <nav class="relative h-full flex justify-start items-center gap-x-5">
+        <nav class="relative h-full flex justify-start items-center gap-x-3 sm:gap-x-5">
 
             <h1 class="font-amsi_narw_regular text-[16px]/[1.2] text-rosa_B5">Relatório de<br>Sustentabilidade</h1>
             <!-- Menu -->
@@ -28,15 +28,17 @@
                 <span aria-hidden="true"></span>
             </a>
 
-            <ul class="flex justify-start items-center gap-x-8 overflow-hidden max-w-0 transition-all duration-300 ease-in-out whitespace-nowrap">
-                <li><a href="#mensagem-da-administracao">Mensagem da Administração</a></li>
-                <li><a href="#a-anima-educacao">A Anima Educação</a></li>
-                <li><a href="#nossos-compromissos">Nossos Compromissos</a></li>
-                <li><a href="#inspirali">Inspirali</a></li>
-                <li><a href="#instituto-anima">Instituto Ânima</a></li>
+            <ul class="absolute top-14 left-[-78px] lg:relative lg:top-auto lg:left-auto flex flex-col items-start lg:flex-row justify-start lg:items-center gap-x-2 xl:gap-x-8 overflow-hidden max-w-0 max-h-0 transition-all duration-300 ease-in-out whitespace-nowrap bg-white/70 backdrop-blur-xl lg:bg-white lg:p-0">
+                <li><a href="#mensagem-da-administracao" class="text-rosa_B5 lg:text-[#696969]">Mensagem da Administração</a></li>
+                <li><a href="#a-anima-educacao" class="text-roxo_5B lg:text-[#696969]">A Anima Educação</a></li>
+                <li><a href="#nossos-compromissos" class="text-vermelho_F0 lg:text-[#696969]">Nossos Compromissos</a></li>
+                <li><a href="#inspirali" class="text-cinza_7A lg:text-[#696969]">Inspirali</a></li>
+                <li><a href="#instituto-anima" class="text-azul_1E lg:text-[#696969]">Instituto Ânima</a></li>
             </ul>
 
-            <a href="#" class="btn-download uppercase text-white text-[16px]/[1] font-amsi_narw_semibold px-8 h-[37px] flex justify-center items-center rounded-full transition-colors duration-300">Download</a>
+            <a href="#" class="btn-download uppercase text-white text-[14px]/[1] sm:text-[16px]/[1] font-amsi_narw_semibold px-4 sm:px-8 h-[37px] flex justify-center items-center rounded-full transition-colors duration-300">
+                Download
+            </a>
 
             
         </nav>
@@ -48,9 +50,8 @@
 
     <!-- Hero -->
     <section class="relative w-full" data-color="main-rosa_B5">
-        <!-- <img src="img/hero_video.webp" class="w-full relative" alt=""> -->
         <video
-            class="hidden md:block w-full h-auto"
+            class="block w-full h-auto"
             autoplay
             loop
             muted
@@ -62,8 +63,9 @@
 
 
     <!-- Mensagem da Administração -->
-    <section class="relative w-full flex justify-end items-start pt-20 z-10" data-color="main-rosa_B5" id="mensagem-da-administracao">
-        <div class="flex-1 pr-12 3xl:pt-14">
+    <section class="relative w-full flex flex-wrap lg:flex-nowrap justify-end items-start pt-10 md:pt-20 z-10 sm:px-4 lg:px-0" data-color="main-rosa_B5" id="mensagem-da-administracao">
+
+        <div class="flex-1 px-4 sm:px-0 xl:pr-12 3xl:pt-14 ">
             <h2 class="text-rosa_B5 mb-8">Mensagem da Administração</h2>
             <p>A Ânima Educação consolida sua “Terceira Onda” de crescimento ao fortalecer um modelo que une desempenho, propósito e impacto social por meio da educação.</p>
 
@@ -71,37 +73,44 @@
 
             <p>Diante dos resultados apresentados neste relatório, celebramos com orgulho a nossa jornada e reafirmamos nossa vocação de transformar o Brasil pela educação.</p>
 
-            <div class="w-full flex justify-center items-center mt-8">
+            <div class="w-full  justify-center items-center mt-8 hidden lg:flex">
                 <a href="#" class="btn-pill bg-rosa_B5">Leia o relatório</a>
             </div>
         </div>
 
-        <div class="w-[500px] xl:w-[667px] 3xl:w-[900px] grid grid-cols-2 gap-6">
-            <div>
-                <img src="img/paula.webp" class="w-full mb-4" alt="">
+        <div class="w-full lg:w-[500px] xl:w-[667px] 3xl:w-[900px] grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 lg:mt-0">
+            <div class="pl-4 sm:pl-0">
+                <img src="img/paula-mobile.webp" class="w-full block md:hidden mb-4" alt="">
+                <img src="img/paula.webp" class="w-full hidden md:block mb-4" alt="">
                 <h4 class="text-rosa_B5 uppercase">Paula Harraca</h4>
                 <div class="text-[18px]/[1.2] text-paragraph font-amsi_narw_light">diretora-presidente </div>
             </div>
-            <div>
-                <img src="img/daniel.webp" class="w-full mb-4" alt="">
-                <h4 class="text-rosa_B5 uppercase">Daniel Faccini Castanho</h4>
-                <div class="text-[18px]/[1.2] text-paragraph font-amsi_narw_light">Presidente do Conselho de Administração</div>
+
+            <div class="pr-4 sm:pr-0">
+                <img src="img/daniel-mobile.webp" class="w-full block md:hidden mb-4" alt="">
+                <img src="img/daniel.webp" class="w-full hidden md:block mb-4" alt="">
+                <h4 class="text-rosa_B5 uppercase pl-4 sm:pl-0">Daniel Faccini Castanho</h4>
+                <div class="text-[18px]/[1.2] text-paragraph font-amsi_narw_light pl-4 sm:pl-0">Presidente do Conselho de Administração</div>
             </div>
+        </div>
+
+        <div class="w-full justify-center items-center mt-12 flex lg:hidden">
+            <a href="#" class="btn-pill bg-rosa_B5">Leia o relatório</a>
         </div>
         
     </section>
 
 
     <!-- A Anima Educação -->
-    <section class="relative w-full pt-[220px] border border-red-400" data-color="main-roxo_5B" id="a-anima-educacao">
+    <section class="relative w-full pt-20 md:pt-[220px]" data-color="main-roxo_5B" id="a-anima-educacao">
 
         <!-- mesh 1 -->
         <img src="img/mesh1.webp" class="absolute -top-16 right-0 w-[262px] h-auto" alt="">
 
         <!-- waves -->
-        <img src="svg/waves-anima.svg" class="absolute top-14 left-0 w-[388px] h-auto" alt="">
+        <img src="svg/waves-anima.svg" class="absolute top-14 left-0 w-[388px] h-auto hidden md:block" alt="">
 
-        <div class="container relative z-10">
+        <div class="lg:container relative z-10 reset-container-padding">
             <img src="img/a-anima.webp" class="w-full rounded-tl-[56px] rounded-br-[56px] " alt="">
 
             <h2 class="text-roxo_5B my-8">A Anima Educação</h2>
@@ -113,34 +122,54 @@
 
 
         <!-- mapa -->
-        <div class="relative w-full pt-40 bg-gradient-to-b from-[#D1BFE9]/0 via-[#BDA5DF] to-[#F7F5FD]">
+        <div class="relative w-full mt-16 lg:pt-40 bg-gradient-to-b from-[#D1BFE9]/0 via-[#BDA5DF] to-[#F7F5FD]">
 
-            <div class="container relative z-10">
-                <div class="flex justify-between content-stretch">
-                    
-                    <div class="w-[35%] 3xl:w-[40%] h-[534px] 3xl:h-[700px] bg-white flex flex-col justify-start items-center rounded-3xl border border-roxo_5B p-8">
-                        <h3 class="text-center uppercase text-roxo_5B mb-8">Nossas marcas e instituições</h3>
 
-                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-4">Marcas Especializadas</div>
-                        <img src="img/marcas-especializadas.webp" class="w-full max-w-[580px] mb-10" alt="">
-
-                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-4">Soluções em Educação</div>
-                        <img src="svg/logo-anima-solucoes.svg" class="w-[152px] 3xl:w-[260px] mb-10" alt="">
-
-                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-7">Associação sem fins lucrativos </div>
-                        <img src="svg/logo-instituto-anima.svg" class="w-[136px] 3xl:w-[280px]" alt="">
+            <div class="lg:container relative z-10 lg:px-4 2xl:px-8 3xl:px-12">
+                
+                <div class="flex lg:hidden justify-end items-center z-30 w-full border border-red-400">
+                    <div class="md:container">
+                        <div class="flex justify-end items-center">
+                            <img src="/img/arrow-anim.webp" class="h-12 animate-bounce-left " alt="">
+                            <img src="/svg/handpointing.svg" class="w-8 " alt="">
+                        </div>
                     </div>
+                </div>
 
-                    <div class="w-[1.5px] bg-roxo_5B"></div>
+                <!-- mapa content -->
+                <div class="flex w-full">
+                
+                    <div class="overflow-x-auto overflow-y-hidden w-full bg-transparent">
 
-                    <div class="flex flex-col justify-center items-center">
-                        <h3 class="text-center uppercase text-roxo_5B mb-8">Marcas com operação de ensino presencial</h3>
-                        <img src="img/map.webp" class="w-[554px] 3xl:w-[700px]" alt="">
+                        <div class="relative flex w-max gap-x-10 px-4 lg:gap-x-0 lg:px-0 lg:w-auto justify-between content-stretch">
+                            
+                            <div class="w-[380px] sm:w-[490px] md:w-[580px] lg:w-[35%] 3xl:w-[40%] h-[534px] 3xl:h-[700px] bg-white flex flex-col justify-start items-center rounded-3xl border border-roxo_5B p-8">
+                                <h3 class="text-center uppercase text-roxo_5B mb-8">Nossas marcas e instituições</h3>
+
+                                <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-4">Marcas Especializadas</div>
+                                <img src="img/marcas-especializadas.webp" class="w-full max-w-[580px] mb-10" alt="">
+
+                                <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-4">Soluções em Educação</div>
+                                <img src="svg/logo-anima-solucoes.svg" class="w-[152px] 3xl:w-[260px] mb-10" alt="">
+
+                                <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-7">Associação sem fins lucrativos </div>
+                                <img src="svg/logo-instituto-anima.svg" class="w-[136px] 3xl:w-[280px]" alt="">
+                            </div>
+
+                            <div class="min-w-[1.5px] bg-roxo_5B"></div>
+
+                            <div class="w-[480px] sm:w-[480px] md:w-[500px] lg:w-auto flex flex-col justify-center items-center">
+                                <h3 class="text-center uppercase text-roxo_5B mb-8">Marcas com operação de ensino presencial</h3>
+                                <img src="img/map.webp" class="w-[480px] sm:w-[554px] 3xl:w-[700px]" alt="">
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-10 ">
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mt-10 px-4">
                     <div>
                         <div class="text-roxo_5B big24">+ <span class="big45">360</span> mil</div>
                         <div class="numbers_parag mt-1">estudantes</div>
@@ -181,7 +210,7 @@
                 </div>
             </div>
 
-            <img src="svg/waves-map.svg" class="absolute top-0 right-0 w-[470px] h-auto z-0" alt="">
+            <img src="svg/waves-map.svg" class="absolute top-0 right-0 w-[470px] h-auto z-0 hidden lg:block" alt="">
         </div>
     </section>
 
@@ -189,7 +218,7 @@
     <!-- Nossos Compromissos -->
     <section class="relative w-full bg-nossos-compromissos bg-cover bg-top py-20" data-color="main-vermelho_F0" id="nossos-compromissos">
 
-        <div class="container relative z-10">
+        <div class="relative lg:container reset-container-padding z-10 ">
             <h2 class="text-vermelho_F0">Nossos Compromissos</h2>
 
             <div class="flex justify-start items-center gap-2 mt-6">
@@ -201,9 +230,10 @@
         </div>
 
 
-        <div class="relative grid grid-cols-[230px_1fr] items-start gap-x-4 z-10 border border-green-400 compromissosWrapper">
+        <!-- desktop -->
+        <div class="relative hidden md:grid grid-cols-1 md:grid-cols-[180px_1fr] lg:grid-cols-[230px_1fr] items-start gap-x-4 z-10 border border-green-400 compromissosWrapper">
 
-            <nav class="sticky left-0 top-0 pt-20 w-[230px]">
+            <nav class="sticky block left-0 top-0 pt-20 w-[180px] lg:w-[230px]">
                 <ul class="border border-red-400 relative z-10 flex flex-col justify-start items-start" id="compromissosNav" >
                     <li>
                         <a href="#compromisso1" data-slide-index="0" data-short="C1" data-full="Compromisso 1" class="active">
@@ -253,8 +283,8 @@
 
                         <!-- c1 -->
                         <div>
-                            <div class="flex justify-start items-start ">
-                                <div class="flex-1 pr-14">
+                            <div class="itemCompromisso">
+                                <div class="leftCol">
                                     <h3 class="pr-20">Educação transformadora e de qualidade para o aluno</h3>
             
                                     <img src="svg/ico-ods04.svg" class="size-[63px] 3xl:size-20 my-4" alt="">
@@ -334,8 +364,8 @@
 
                         <!-- c2 -->
                         <div>
-                            <div class="flex justify-start items-start ">
-                                <div class="flex-1 pr-14">
+                            <div class="itemCompromisso">
+                                <div class="leftCol">
                                     <h3 class="pr-20">Experiência e valorização do educador</h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
@@ -420,8 +450,8 @@
     
                         <!-- c3 -->
                         <div>
-                            <div class="flex justify-start items-start ">
-                                <div class="flex-1 pr-14">
+                            <div class="itemCompromisso">
+                                <div class="leftCol">
                                     <h3 class="pr-20">Impacto comunitário e territorial </h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
@@ -501,8 +531,8 @@
 
                         <!-- c4 -->
                         <div>
-                            <div class="flex justify-start items-start ">
-                                <div class="flex-1 pr-14">
+                            <div class="itemCompromisso">
+                                <div class="leftCol">
                                     <h3 class="pr-20">Governança Transparente e Responsável</h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
@@ -583,8 +613,8 @@
 
                         <!-- c5 -->
                         <div>
-                            <div class="flex justify-start items-start ">
-                                <div class="flex-1 pr-14">
+                            <div class="itemCompromisso">
+                                <div class="leftCol">
                                     <h3 class="pr-20">Consciência ambiental</h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
@@ -662,8 +692,8 @@
                             
                         <!-- c6 -->
                         <div>
-                            <div class="flex justify-start items-start ">
-                                <div class="flex-1 pr-14">
+                            <div class="itemCompromisso">
+                                <div class="leftCol">
                                     <h3 class="pr-20">Diversidade, equidade e inclusão</h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
@@ -743,7 +773,7 @@
                 </div>
             </div>
 
-            <div class="absolute right-0 top-[102px] w-[64%] h-[46px] border border-vermelho_F0 rounded-bl-[24px] z-0"></div>
+            <div class="absolute right-0 top-[102px] w-[64%] h-[46px] border border-vermelho_F0 rounded-bl-[24px] z-0 hidden xl:block"></div>
         </div>
 
         <!-- mesh -->
@@ -752,10 +782,10 @@
 
 
     <!-- Inspirali -->
-    <section class="relative w-full pt-28 pb-14 bg-[#CCCAC0] " data-color="main-cinza_7A" id="inspirali">
-        <div class="container relative z-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
+    <section class="relative w-full pt-14 lg:pt-28 pb-14 bg-[#CCCAC0]" data-color="main-cinza_7A" id="inspirali">
+        <div class=" relative lg:container reset-container-padding z-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-8">
+                <h2 class="text-cinza_7A mb-4 block lg:hidden">Inspirali</h2>
                 <div class="relative min-w-0">
                     <div class="relative w-full">
                         <div class="inspiralliSlider">
@@ -772,23 +802,25 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col justify-center items-start">
-                    <h2 class="text-cinza_7A mb-10">Inspirali</h2>
+                <div class="flex flex-col justify-start lg:justify-center items-start">
+                    <h2 class="text-cinza_7A mb-10 hidden lg:block">Inspirali</h2>
                     <p>A Inspirali é a plataforma de educação médica da Ânima e um dos principais ecossistemas do setor no país, dedicando-se a formar médicos em todas as etapas de sua carreira. </p>
 
                     <p>Com foco no aprendizado ao longo da vida, ela integra excelência técnica, humanização e responsabilidade social, formando verdadeiros agentes de uma medicina justa, equitativa e solidária.</p>
 
 
-                    <a href="#" class="btn-pill bg-cinza_7A mt-8">Portal de Transparência ESG</a>
+                    <div class="flex justify-center md:justify-start w-full mt-8">
+                        <a href="#" class="btn-pill bg-cinza_7A ">Portal de Transparência ESG</a>
+                    </div>
 
                 </div>
             </div>
 
-            <div class="text-paragraph font-amsi_narw_semibold text-[20px]/[1] mt-6">
+            <div class="text-paragraph font-amsi_narw_semibold text-[20px]/[1] mt-16 lg:mt-6">
                 Graduação em Medicina 
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 mt-6 graduacaoGrid">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 mt-6 graduacaoGrid">
 
                 <div class="itemGraduacao">
                     <img src="svg/ico-graducao1.svg" class="w-[35px] pt-2" alt="">
@@ -857,116 +889,130 @@
             </div>
 
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 bg-white p-6 rounded-tr-3xl rounded-bl-3xl mt-8">
-                <div class="flex flex-col justify-start items-start">
-                    <img src="svg/logo-inspiralipos.svg" class="h-10" alt="">
-                </div>
 
-                <div class="flex flex-col justify-start items-start">
-                    <img src="svg/logo-inspirali.svg" class="h-10" alt="">
-                </div>
-
-                <div class="flex flex-col justify-start items-start">
-                    <img src="svg/logo-medroom.svg" class="h-10" alt="">
-                </div>
-
-                <div class="flex flex-col justify-start items-start">
-                    <img src="svg/logo-euresidente.svg" class="h-10" alt="">
-                </div>
-
-
-                <!-- linha 1 -->
-                <div class="boxGraduacao bg-[#5E8F97]">
-                    <img src="svg/ico-pos1.svg" class="w-8" alt="">
-                    <div>
-                        <span class="big24"><span class="big45">60</span> cursos</span>
-                        <p>em diversas especialidades com cobertura nacional e abertura de nova sede em Recife (PE)</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#818875]">
-                    <img src="svg/ico-inspirali1.svg" class="w-8" alt="">
-                    <div>
-                        <span class="big24"><span class="big45">5</span> centros</span>
-                        <p>de Pesquisa Clínica, com presença nas regiões Sul, Sudeste e Nordeste</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#92867D]">
-                    <img src="svg/ico-medroom1.svg" class="w-8" alt="">
-                    <div>
-                        <span class="big24">+ <span class="big45">100</span> mil</span>
-                        <p>alunos que utilizam plataforma imersiva de realidade virtual inserido no plano pedagógico da graduação</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#B19437]">
-                    <img src="svg/ico-eumedico1.svg" class="w-[25px]" alt="">
-                    <div>
-                        <span class="big24">+ <span class="big45">2</span> mil</span>
-                        <p>aprovações em residência médica em 2025</p>
+            <div class="relative bg-white p-6 pt-16 lg:pt-6 rounded-tr-3xl rounded-bl-3xl mt-8">
+                <div class="absolute top-1 inset-x-0 flex lg:hidden justify-end items-center z-30 w-full px-3">
+                    <div class="flex justify-end items-center">
+                        <img src="/img/arrow-anim-cinza.webp" class="h-12 animate-bounce-left " alt="">
+                        <img src="/svg/handpointing-cinza.svg" class="w-8 " alt="">
                     </div>
                 </div>
 
-
-                <!-- linha 2 -->
-                <div class="boxGraduacao bg-[#5E8F97]">
-                    <img src="svg/ico-pos2.svg" class="w-8" alt="">
-                    <div>
-                        <span class="big24">+ <span class="big45">4</span> mil</span>
-                        <p>alunos ativos em todo o Brasil (+20%)</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#818875]">
-                    <img src="svg/ico-inspirali2.svg" class="w-8" alt="">
-                    <div>
-                        <span class="big24"><span class="big45">12</span> estudos</span>
-                        <p>simultâneos conduzidos em 2025 e temos 30 novos protocolos previstos para 2026</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#92867D]">
-                    <img src="svg/ico-medroom2.svg" class="w-8" alt="">
-                    <div>
-                        <span class="big24">+ <span class="big45">70</span> universidades</span>
-                        <p>atendidas no Brasil, Portugal, México, Colômbia e Paraguai</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#B19437]">
-                    <img src="svg/ico-eumedico2.svg" class="w-[25px]" alt="">
-                    <div>
-                        <span class="big24"><span class="big32">Referência</span></span>
-                        <p>em preparação para o ENAMED</p>
-                    </div>
-                </div>
-
-
-                <!-- linha 3 -->
-                <div class="boxGraduacao bg-[#5E8F97]">
-                    <img src="svg/ico-pos3.svg" class="w-7" alt="">
-                    <div>
-                        <span class="big24">+ <span class="big45">25</span> mil</span>
-                        <p>atendimentos gratuitos à população, com crescimento de 38% vs. 2024</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#818875]">
-                    <img src="svg/ico-inspirali3.svg" class="w-8" alt="">
-                    <div>
-                        <span class="big24">+ <span class="big45">570</span></span>
-                        <p>pessoas impactadas</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#92867D]">
-                    <img src="svg/ico-medroom3.svg" class="w-8" alt="">
-                    <div>
-                        <span class="big24">+ <span class="big45">12</span> mil</span>
-                        <p>alunos estudando casos clínicos reais com a plataforma de Inteligência Artificial</p>
-                    </div>
-                </div>
-                <div class="boxGraduacao bg-[#B19437]">
-                    <img src="svg/ico-eumedico3.svg" class="w-[25px]" alt="">
-                    <div>
-                        <p>Inteligência Artificial para</p>
-                        <span class="big24"><span class="big32">Estudo Personalizado</span></span>
+                <div class="relative overflow-x-auto overflow-y-hidden w-full">
+                    <div class="relative w-[1108px] lg:w-auto grid grid-cols-4 gap-2 ">
+        
+                        <div class="flex flex-col justify-start items-start">
+                            <img src="svg/logo-inspiralipos.svg" class="h-10" alt="">
+                        </div>
+        
+                        <div class="flex flex-col justify-start items-start">
+                            <img src="svg/logo-inspirali.svg" class="h-10" alt="">
+                        </div>
+        
+                        <div class="flex flex-col justify-start items-start">
+                            <img src="svg/logo-medroom.svg" class="h-10" alt="">
+                        </div>
+        
+                        <div class="flex flex-col justify-start items-start">
+                            <img src="svg/logo-euresidente.svg" class="h-10" alt="">
+                        </div>
+        
+        
+                        <!-- linha 1 -->
+                        <div class="boxGraduacao bg-[#5E8F97]">
+                            <img src="svg/ico-pos1.svg" class="w-8" alt="">
+                            <div>
+                                <span class="big24"><span class="big45">60</span> cursos</span>
+                                <p>em diversas especialidades com cobertura nacional e abertura de nova sede em Recife (PE)</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#818875]">
+                            <img src="svg/ico-inspirali1.svg" class="w-8" alt="">
+                            <div>
+                                <span class="big24"><span class="big45">5</span> centros</span>
+                                <p>de Pesquisa Clínica, com presença nas regiões Sul, Sudeste e Nordeste</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#92867D]">
+                            <img src="svg/ico-medroom1.svg" class="w-8" alt="">
+                            <div>
+                                <span class="big24">+ <span class="big45">100</span> mil</span>
+                                <p>alunos que utilizam plataforma imersiva de realidade virtual inserido no plano pedagógico da graduação</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#B19437]">
+                            <img src="svg/ico-eumedico1.svg" class="w-[25px]" alt="">
+                            <div>
+                                <span class="big24">+ <span class="big45">2</span> mil</span>
+                                <p>aprovações em residência médica em 2025</p>
+                            </div>
+                        </div>
+        
+        
+                        <!-- linha 2 -->
+                        <div class="boxGraduacao bg-[#5E8F97]">
+                            <img src="svg/ico-pos2.svg" class="w-8" alt="">
+                            <div>
+                                <span class="big24">+ <span class="big45">4</span> mil</span>
+                                <p>alunos ativos em todo o Brasil (+20%)</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#818875]">
+                            <img src="svg/ico-inspirali2.svg" class="w-8" alt="">
+                            <div>
+                                <span class="big24"><span class="big45">12</span> estudos</span>
+                                <p>simultâneos conduzidos em 2025 e temos 30 novos protocolos previstos para 2026</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#92867D]">
+                            <img src="svg/ico-medroom2.svg" class="w-8" alt="">
+                            <div>
+                                <span class="big24">+ <span class="big45">70</span> universidades</span>
+                                <p>atendidas no Brasil, Portugal, México, Colômbia e Paraguai</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#B19437]">
+                            <img src="svg/ico-eumedico2.svg" class="w-[25px]" alt="">
+                            <div>
+                                <span class="big24"><span class="big32">Referência</span></span>
+                                <p>em preparação para o ENAMED</p>
+                            </div>
+                        </div>
+        
+        
+                        <!-- linha 3 -->
+                        <div class="boxGraduacao bg-[#5E8F97]">
+                            <img src="svg/ico-pos3.svg" class="w-7" alt="">
+                            <div>
+                                <span class="big24">+ <span class="big45">25</span> mil</span>
+                                <p>atendimentos gratuitos à população, com crescimento de 38% vs. 2024</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#818875]">
+                            <img src="svg/ico-inspirali3.svg" class="w-8" alt="">
+                            <div>
+                                <span class="big24">+ <span class="big45">570</span></span>
+                                <p>pessoas impactadas</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#92867D]">
+                            <img src="svg/ico-medroom3.svg" class="w-8" alt="">
+                            <div>
+                                <span class="big24">+ <span class="big45">12</span> mil</span>
+                                <p>alunos estudando casos clínicos reais com a plataforma de Inteligência Artificial</p>
+                            </div>
+                        </div>
+                        <div class="boxGraduacao bg-[#B19437]">
+                            <img src="svg/ico-eumedico3.svg" class="w-[25px]" alt="">
+                            <div>
+                                <p>Inteligência Artificial para</p>
+                                <span class="big24"><span class="big32">Estudo Personalizado</span></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
         </div>
 
@@ -981,10 +1027,10 @@
 
 
     <!-- Instituto Ânima + CTA -->
-    <section class="relative w-full bg-instituto-cta bg-no-repeat bg-cover bg-top bg-white pt-24 pb-20" data-color="main-azul_1E" id="instituto-anima">
+    <section class="relative w-full bg-instituto-cta bg-no-repeat bg-cover bg-top bg-white pt-24 pb-20 " data-color="main-azul_1E" id="instituto-anima">
         <div class="container">
 
-            <div class="flex justify-between items-start gap-x-8">
+            <div class="flex flex-wrap lg:flex-nowrap justify-between items-start gap-x-8">
                 <div class="flex-1">
                     <h2 class="text-azul_1E mb-8">Instituto Ânima</h2>
 
@@ -995,7 +1041,7 @@
                     <p>A produção e a disseminação do conhecimento são pilares para a excelência acadêmica e a relevância social das Instituições de Ensino Superior (IES) da Ânima Educação. O Instituto Ânima atua de forma estratégica para fortalecer a pesquisa aplicada, promover a articulação com redes científicas e assegurar a gestão qualificada de bolsas, em parceria com o Ecossistema Ânima.</p>
                 </div>
 
-                <div class="w-[65.70%] 3xl:w-[62%] relative min-w-0">
+                <div class="w-full lg:w-[65.70%] 3xl:w-[62%] relative min-w-0 mt-8 lg:mt-0">
                     <div class="institutoSlider">
                         <div><img src="img/slide-inst-1.webp" alt=""></div>
                         <div><img src="img/slide-inst-2.webp" alt=""></div>
@@ -1004,8 +1050,9 @@
                         <div><img src="img/slide-inst-5.webp" alt=""></div>
                     </div>
                     
-                    <div class="relative w-full bg-white border border-azul_1E rounded-tr-[40px] -mt-20 z-10 p-6">
-                        <div class="text-white font-amsi_narw_regular text-[16px]/[1] bg-azul_1E rounded-full py-[6px] px-3 inline-block mb-3">Destaques do Instituto</div>
+                    <div class="relative w-full bg-white border border-azul_1E rounded-tr-[40px] -mt-20 z-10 py-5 px-3 md:p-6">
+
+                        <div class="text-white font-amsi_narw_regular text-[16px]/[1] bg-azul_1E rounded-full py-[6px] px-2 inline-block mb-3 translate-x-3 md:translate-x-0">Destaques do Instituto</div>
 
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 gridDestaques">
@@ -1060,32 +1107,23 @@
 
 
             <!-- cta -->
-            <div class="relative flex flex-col justify-start items-center mt-20 rounded-[32px] bg-white/[0.5] backdrop-blur-xl text-center pt-10 pb-16 gap-y-7">
-                <div class="text-roxo_5B font-amsi_bold text-[36px]/[1.3] w-[464px]">Leia a íntegra do Relatório de Sustentabilidade 2025</div>
+            <div class="relative flex flex-col justify-start items-center mt-20 rounded-[32px] bg-white/[0.5] backdrop-blur-xl text-center pt-10 pb-10 lg:pb-16 gap-y-7">
+                <div class="text-roxo_5B font-amsi_bold text-[24px]/[1.2] lg:text-[36px]/[1.3] lg:w-[464px]">Leia a íntegra do Relatório de Sustentabilidade 2025</div>
 
                 <a href="#" class="btn-pill bg-roxo_5B">relatório completo</a>
             </div>
         </div>
     </section>
 
-
-    <!-- cta -->
-    <div class="container hidden">
-        <div class="bg-rosa_B5"></div>
-        <div class="bg-cinza_7A"></div>
-        <div class="bg-vermelho_F0"></div>
-        <div class="bg-roxo_5B"></div>
-        <div class="bg-azul_1E"></div>
-    </div>
-
     
     <!-- Footer -->
-    <footer class="relative w-full bg-roxo_5B h-[147px]">
+    <footer class="relative w-full bg-roxo_5B h-[223px] sm:h-[147px]">
         <div class="container h-full">
-            <div class="flex justify-between items-center h-full">
+            <div class="flex flex-col sm:flex-row justify-center sm:justify-between items-center h-full gap-y-8">
                 <img src="svg/logo-footer.svg" class="w-[128px]" alt="">
 
-                <div class="flex flex-col justify-start items-end">
+
+                <div class="flex flex-col justify-start items-center sm:items-end">
                     <a href="#" class="text-white text-[16px]/[1] font-amsi_narw_regular flex justify-end items-center gap-x-1 mb-4 backToTopBtn">
                         voltar ao topo
                         <img src="svg/ico-arrow-top.svg" class="w-4" alt="">
@@ -1116,6 +1154,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- classe necessárias -->
+    <div class="hidden">
+        <div class="bg-rosa_B5"></div>
+        <div class="bg-cinza_7A"></div>
+        <div class="bg-vermelho_F0"></div>
+        <div class="bg-roxo_5B"></div>
+        <div class="bg-azul_1E"></div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
 

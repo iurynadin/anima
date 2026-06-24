@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 	// versão desktop
 
-	$("nav.secondary ul li a").click(function (event) {
+	$("header nav ul li a").click(function (event) {
 		let target = $(event.target).attr('href');
 		const diffItem = $(event.target).data('diff');
 		let diff = 60;
@@ -38,13 +38,13 @@ $(document).ready(function() {
 			diff = diffItem;
 		}
 		// const menuRef = ($(window).width() >= 782) ? $(".secondary") : $(".secondary-mobile");
-		const menuRef = $(".secondary");
-		toggleMenu(menuRef);
+		// const menuRef = $(".secondary");
+		// toggleMenu(menuRef);
 		setTimeout(() => {
 			$('html, body').animate({
 				scrollTop: $(target).offset().top - diff
 			}, 800, 'easeInOutQuint');
-		}, 150);
+		}, 0);
 
 		event.preventDefault();
 	});
@@ -152,10 +152,10 @@ $(document).ready(function() {
 		laterais = browserWidth - containerWidth;
 		metadeLaterais = Math.round(laterais / 2);
 
-		console.log('containerWidth', containerWidth);
-		console.log('containerPadding', containerPadding);
-		console.log('browserWidth', browserWidth);
-		console.log('laterais:' , laterais)
+		// console.log('containerWidth', containerWidth);
+		// console.log('containerPadding', containerPadding);
+		// console.log('browserWidth', browserWidth);
+		// console.log('laterais:' , laterais)
 
 		const diff3xl = ($(window).width() > 1920) ? 120 : 0;
 
@@ -174,6 +174,8 @@ $(document).ready(function() {
 		if ($(window).width() >= 1024) { // entra no lg
 			$('.compromissoContent').css('padding-right' ,metadeLaterais + containerPadding);
 			$('#mensagem-da-administracao').css('padding-left' ,metadeLaterais + containerPadding);
+		} else {
+			$('#mensagem-da-administracao').css('padding-left', 8 + containerPadding);
 		}
 		
 
@@ -207,22 +209,40 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	document.querySelector('.navbar-burger').addEventListener('click', function () {
 		const nav = document.querySelector('header nav > ul');
-		
-		if (nav.classList.contains('max-w-0')) {
-			// Abrir: calcula a largura real do conteúdo e aplica
-			nav.classList.remove('max-w-0');
-			nav.classList.add('max-w-[800px]'); // valor alto o suficiente para caber tudo
-			header.classList.remove('w-auto');
-			header.classList.add('w-full');
+		const header = document.querySelector('header');
+		const isDesktop = window.innerWidth >= 1024;
+		const isOpen = this.classList.contains('is-active');
+
+		if (!isOpen) {
+			console.log('abre')
+			if (isDesktop) {
+				// Remove restrição de altura e expande largura
+				nav.classList.remove('max-w-0');
+				nav.classList.add('max-w-[800px]', 'max-h-[none]');
+				header.classList.remove('w-auto');
+				header.classList.add('w-full');
+			} else {
+				// Remove restrição de largura e expande altura
+				header.classList.remove('rounded-br-[20px]');
+				nav.classList.remove('max-h-0');
+				nav.classList.add('max-h-[400px]', 'max-w-[none]','rounded-b-[20px]');
+				nav.style.width = window.innerWidth + 'px'; // aplica largura da tela
+			}
 		} else {
-			// Fechar
-			nav.classList.remove('max-w-[800px]');
-			nav.classList.add('max-w-0');
-			header.classList.remove('w-full');
-			header.classList.add('w-auto');
+			if (isDesktop) {
+				nav.classList.remove('max-w-[800px]', 'max-h-[none]');
+				nav.classList.add('max-w-0');
+				header.classList.remove('w-full');
+				header.classList.add('w-auto');
+			} else {
+				header.classList.add('rounded-br-[20px]');
+				nav.classList.remove('max-h-[400px]', 'max-w-[none]','rounded-b-[20px]');
+				nav.classList.add('max-h-0');
+				nav.style.width = ''; // limpa ao fechar
+			}
 		}
-	
-		this.classList.toggle('is-active'); // opcional: animar o burger
+
+		this.classList.toggle('is-active');
 	});
 
 
