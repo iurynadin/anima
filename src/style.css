@@ -245,15 +245,181 @@
 		}
 	}
 
+	.compMobileChildSlider {
+		.slick-dots { 
+			@apply -bottom-8 top-auto h-10 translate-y-0 !important;
+		}
+
+		.slick-child-item {
+			@apply relative overflow-hidden rounded-tl-3xl rounded-br-3xl;
+
+			img {
+				@apply w-full;
+			}
+
+			.cover {
+				@apply absolute inset-0 flex flex-col justify-end items-start p-4 z-20 ;
+			}
+
+			.gradient {
+				@apply absolute inset-x-0 bottom-0 h-[50%] block z-10 bg-gradient-to-t from-black/80 from-60% to-transparent;
+			}
+
+			.thumbTitle {
+				@apply text-[20px]/[1.2] 3xl:text-[24px]/[1.2] text-white font-amsi_narw_regular mb-2;
+			}
+
+			p {
+				@apply text-[16px]/[1.2] 3xl:text-[19px]/[1.2] text-white font-amsi_narw_light mb-0;
+			}
+		}
+
+		.slick-arrow {
+			@apply absolute flex justify-center items-center top-3 bg-transparent w-8 h-[42px] z-20 !important;
+		}
+
+		.slickchild-next-arrow {
+			@apply right-2;
+		}
+		
+		.slickchild-prev-arrow {
+			@apply left-2;
+		}
+	}
+
+	.compromissoSliderMobile {
+
+		.slick-dots {
+
+			@apply top-0 -translate-y-10 flex justify-center items-center w-full gap-x-3 h-10;
+
+			li {
+				@apply bg-vermelho_F0/30 rounded-full size-4 text-[0px] mx-0 !important;
+				button {
+					@apply indent-[-9999px];
+					&::before {
+						@apply bg-transparent w-full h-full opacity-100 !important;
+					}
+				}
+			}
+			li.slick-active {
+				@apply bg-vermelho_F0  rounded-full size-4 !important;
+
+				button {
+					&::before { 
+						@apply bg-transparent w-full h-full opacity-100 !important;
+					}
+				}
+			}
+		}
+
+		.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+			@apply bg-vermelho_F0;
+		}
+
+		.slick-arrow {
+			@apply absolute flex justify-center items-center top-0 bg-vermelho_F0 w-[63px] h-[84px] z-20;
+		}
+
+		.slick-disabled {
+			svg {
+				@apply opacity-10 cursor-default !important;
+			}
+		}
+
+		.slick-next-arrow {
+			@apply right-0 z-20;
+		}
+
+		.slick-prev-arrow {
+			@apply left-0 z-20;
+		}
+
+		.wrapperSlide {
+
+			@apply flex flex-col justify-start items-center;
+
+			.wrapperTitleSlide {
+				@apply h-[84px] w-[calc(100%-136px)] bg-vermelho_F0 flex justify-center items-center gap-x-2;
+
+				span {
+					@apply text-white text-[32px]/[1] font-amsi_narw_bold text-center;
+				}
+			}
+		}
+
+
+		/* scroll pane */
+		.scroll-outer {
+			@apply relative w-full overflow-hidden;
+		}
+		
+		.shape-over {
+			@apply absolute top-[10px] -right-2 left-4 h-[46px] border border-vermelho_F0 pointer-events-none block z-20 rounded-bl-[24px];
+		}
+
+		.scroll-track {
+			@apply relative flex transition-transform duration-500 ease-in-out;
+			
+			.shape-col {
+				@apply relative bg-white p-6 rounded-tl-[32px] rounded-br-[32px];
+			}
+
+			.scroll-col-left {
+				@apply shrink-0 w-[calc(100%-40px)] px-4 pl-6;
+
+			}
+
+			.scroll-col-right {
+				@apply shrink-0 w-[calc(100%-40px)] px-4 pl-0;
+			}
+
+			.itemBoxTitle{
+				@apply text-[20px]/[1.2] 3xl:text-[24px]/[1.2] text-roxo_5B font-amsi_narw_semibold uppercase mb-6;
+			}
+
+			ul {
+				@apply list-disc list-outside pl-4;
+				li {
+					@apply text-[16px]/[1.3] 3xl:text-[18px]/[1.4] font-amsi_narw_light text-paragraph mb-4;
+				}
+			}
+		}
+
+		/* retornar */
+		.btn-left {
+			@apply absolute right-4 top-4 z-10 size-8 flex  items-center justify-center;
+
+			img {
+				@apply size-8;
+			}
+		}
+
+		.btn-right {
+			@apply absolute right-4 top-4 z-10 size-8 flex  items-center justify-center;
+
+			img {
+				@apply size-8;
+			}
+		}
+
+		/* .slick-dotted.slick-slider{
+			@apply pt-10;
+		} */
+	}
+
+	.compromissoSliderMobile, .compromissoSlider {
+		h5 {
+			@apply text-paragraph text-[16px]/[1.2] 3xl:text-[18px]/[1.4] font-amsi_narw_light_italic;
+		}
+	}
+
 	.compromissoSlider {
 
 		.itemCompromisso {
 			@apply flex flex-wrap xl:flex-nowrap justify-start items-start;
 		}
 
-		h5 {
-			@apply text-paragraph text-[16px]/[1.2] 3xl:text-[18px]/[1.4] font-amsi_narw_light_italic;
-		}
 
 		.leftCol{
 			@apply flex-1 xl:pr-14 mb-4 xl:mb-0;
@@ -266,9 +432,9 @@
 		.itemBox {
 			@apply bg-white py-6 lg:py-8 px-5 rounded-tl-[32px] rounded-br-[32px];
 
-			.itemBoxTitle{
-				@apply text-[20px]/[1.2] 3xl:text-[24px]/[1.2] text-roxo_5B font-amsi_narw_semibold uppercase mb-6;
-			}
+		}
+		.itemBoxTitle{
+			@apply text-[20px]/[1.2] 3xl:text-[24px]/[1.2] text-roxo_5B font-amsi_narw_semibold uppercase mb-6;
 		}
 
 		.thumbsRow {
