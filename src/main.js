@@ -27,25 +27,7 @@ $(document).ready(function() {
 
 	// initSlickSlider();
 
-    $(".navbar-burger, .closeSecondary").click(function (event) {
-		const target = $(this).data('target');
-		console.log(target);
-		toggleMenu($(target));
-		event.preventDefault();
-	});
-
 	// versão desktop
-	function toggleMenu($menu) {
-		$burger.toggleClass("is-active");
-
-		if ($menu.hasClass("active")) {
-			$menu.css('pointer-events', 'none');
-			$menu.removeClass("active");
-			$menu.css('pointer-events', '');
-		} else {
-			$menu.addClass("active");
-		}
-	}
 
 	$("nav.secondary ul li a").click(function (event) {
 		let target = $(event.target).attr('href');
@@ -221,6 +203,31 @@ $(document).ready(function() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+	
+	document.querySelector('.navbar-burger').addEventListener('click', function () {
+		const nav = document.querySelector('header nav > ul');
+		
+		if (nav.classList.contains('max-w-0')) {
+			// Abrir: calcula a largura real do conteúdo e aplica
+			nav.classList.remove('max-w-0');
+			nav.classList.add('max-w-[800px]'); // valor alto o suficiente para caber tudo
+			header.classList.remove('w-auto');
+			header.classList.add('w-full');
+		} else {
+			// Fechar
+			nav.classList.remove('max-w-[800px]');
+			nav.classList.add('max-w-0');
+			header.classList.remove('w-full');
+			header.classList.add('w-auto');
+		}
+	
+		this.classList.toggle('is-active'); // opcional: animar o burger
+	});
+
+
+
+
 	const sections = document.querySelectorAll('section[data-color]'); 
 	const header = document.querySelector('header');
 

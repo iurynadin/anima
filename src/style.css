@@ -25,7 +25,7 @@
 	}
 
 	p {
-		@apply text-[18px]/[1.4] 3xl:text-[18px]/[1.4] mb-4  last-of-type:mb-0 text-paragraph font-amsi_narw_light;
+		@apply text-[18px]/[1.4] 3xl:text-[18px]/[1.5] mb-4  last-of-type:mb-0 text-paragraph font-amsi_narw_light;
 		
 		b {
 			@apply font-amsi_narw_semibold;
@@ -48,11 +48,11 @@
 	}
 
 	h2 {
-		@apply text-[24px]/[1.2] lg:text-[40px]/[1.2] xl:text-[48px]/[1.2] font-amsi_narw_light;
+		@apply text-[24px]/[1.2] lg:text-[40px]/[1.2] xl:text-[48px]/[1.2] 3xl:text-[56px]/[1.2] font-amsi_narw_light;
 	}
 
 	h3 {
-		@apply text-[24px]/[1.2] font-amsi_narw_bold;
+		@apply text-[24px]/[1.2] 3xl:text-[32px]/[1.2] font-amsi_narw_bold;
 	}
 
 	h4 {
@@ -102,7 +102,7 @@
 		}
 
 		.thin-line {
-			@apply absolute inset-x-0 bottom-0 h-[2px] block transition-all duration-300;
+			@apply absolute left-[6.3rem] right-6 bottom-0 h-[2px] block transition-all duration-300;
 		}
 
 		ul {
@@ -128,10 +128,10 @@
 				@apply opacity-0;
 			}
 			&:nth-child(2) {
-				@apply translate-y-[0] rotate-45;
+				@apply translate-y-[0px] rotate-45;
 			}
 			&:nth-child(3) {
-				@apply -translate-y-3 -rotate-45;
+				@apply -translate-y-[7px] -rotate-45;
 			}
 		}
 	}
@@ -187,19 +187,19 @@
 	}
 
 	.big24 {
-		@apply text-[24px]/[1.1] font-amsi_narw_semibold;
+		@apply text-[24px]/[1.1] 3xl:text-[38px]/[1.1] font-amsi_narw_semibold;
 	}
 
 	.big32 {
-		@apply text-[32px]/[1.1] font-amsi_narw_semibold;
+		@apply text-[32px]/[1.1] 3xl:text-[46px]/[1.1] font-amsi_narw_semibold;
 	}
 
 	.big45 {
-		@apply text-[45px]/[1.1] font-amsi_narw_semibold;
+		@apply text-[45px]/[1.1] 3xl:text-[62px]/[1.1] font-amsi_narw_semibold;
 	}
 
 	.numbers_parag {
-		@apply font-amsi_narw_light text-paragraph text-[16px]/[1.2];
+		@apply font-amsi_narw_light text-paragraph text-[16px]/[1.2] 3xl:text-[22px]/[1.2];
 	}
 
 	.btn-pill {
@@ -209,7 +209,7 @@
 
 	#nossos-compromissos {
 		h3 {
-			@apply text-vermelho_F0 font-amsi_narw_regular text-[32px]/[1.2];
+			@apply text-vermelho_F0 font-amsi_narw_regular text-[32px]/[1.2] 3xl:text-[38px]/[1.2];
 		}
 
 
@@ -217,12 +217,12 @@
 			ul {
 				@apply list-disc list-outside pl-4;
 				li {
-					@apply text-[16px]/[1.3] font-amsi_narw_light text-paragraph mb-4;
+					@apply text-[16px]/[1.3] 3xl:text-[18px]/[1.4] font-amsi_narw_light text-paragraph mb-4;
 				}
 			}
 	
 			p {
-				@apply text-[16px]/[1.3] font-amsi_narw_light text-paragraph;
+				@apply text-[16px]/[1.3] 3xl:text-[18px]/[1.4] font-amsi_narw_light text-paragraph;
 			}
 		}
 	}
@@ -242,7 +242,7 @@
 
 	.compromissoSlider {
 		h5 {
-			@apply text-paragraph text-[16px]/[1.2] font-amsi_narw_light_italic;
+			@apply text-paragraph text-[16px]/[1.2] 3xl:text-[18px]/[1.4] font-amsi_narw_light_italic;
 		}
 
 		.rightCol {
@@ -253,7 +253,7 @@
 			@apply bg-white py-8 px-5 rounded-tl-[32px] rounded-br-[32px];
 
 			.itemBoxTitle{
-				@apply text-[20px]/[1.2] text-roxo_5B font-amsi_narw_semibold uppercase mb-6;
+				@apply text-[20px]/[1.2] 3xl:text-[24px]/[1.2] text-roxo_5B font-amsi_narw_semibold uppercase mb-6;
 			}
 		}
 
@@ -261,7 +261,7 @@
 			@apply relative w-full rounded-tl-[24px] rounded-br-[24px] grid grid-cols-3 mt-4 overflow-hidden;
 
 			.thumb {
-				@apply h-[275px] relative;
+				@apply h-[275px] 3xl:h-[390px] relative;
 
 				img {
 					@apply w-full h-full object-cover object-center;
@@ -276,11 +276,11 @@
 				}
 
 				.thumbTitle {
-					@apply text-[20px]/[1.2] text-white font-amsi_narw_regular mb-2;
+					@apply text-[20px]/[1.2] 3xl:text-[24px]/[1.2] text-white font-amsi_narw_regular mb-2;
 				}
 
 				p {
-					@apply text-[16px]/[1.2] text-white font-amsi_narw_light mb-0;
+					@apply text-[16px]/[1.2] 3xl:text-[19px]/[1.2] text-white font-amsi_narw_light mb-0;
 				}
 			}
 		}

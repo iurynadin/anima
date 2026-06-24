@@ -11,7 +11,7 @@
 
     <div class="responsivePanel"></div>
 
-    <header class="fixed top-0 left-0 w-auto z-50 h-14 flex justify-start items-center  bg-white rounded-br-[20px] gap-x-5 pr-5 transition-all duration-300"> <!-- w-full -->
+    <header class="fixed top-0 left-0 w-auto z-50 h-14 flex justify-start items-center  bg-white rounded-br-[20px] gap-x-5 pr-5 transition-all duration-300 ease-in-out"> <!-- w-full -->
 
         <div class="logo-header-wrapper">
             <img src="/svg/logo-a.svg" class="w-[17px]" alt="Logo Anima">
@@ -21,7 +21,6 @@
         <nav class="relative h-full flex justify-start items-center gap-x-5">
 
             <h1 class="font-amsi_narw_regular text-[16px]/[1.2] text-rosa_B5">Relatório de<br>Sustentabilidade</h1>
-       
             <!-- Menu -->
             <a role="button" class="navbar-burger" data-target=".secondary" aria-label="menu">
                 <span aria-hidden="true"></span>
@@ -29,37 +28,42 @@
                 <span aria-hidden="true"></span>
             </a>
 
-            <ul class="flex justify-start items-center gap-x-8 border border-green-400  overflow-hidden w-0 hidden"> <!--  -->
-                <li><a href="#mensagem-da-administracao" class="">Mensagem da Administração</a></li>
-                <li><a href="#a-anima-educacao" class="">A Anima Educação</a></li>
-                <li><a href="#nossos-compromissos" class="">Nossos Compromissos</a></li>
-                <li><a href="#inspirali" class="">Inspirali</a></li>
-                <li><a href="#instituto-anima" class="">Instituto Ânima</a></li>
+            <ul class="flex justify-start items-center gap-x-8 overflow-hidden max-w-0 transition-all duration-300 ease-in-out whitespace-nowrap">
+                <li><a href="#mensagem-da-administracao">Mensagem da Administração</a></li>
+                <li><a href="#a-anima-educacao">A Anima Educação</a></li>
+                <li><a href="#nossos-compromissos">Nossos Compromissos</a></li>
+                <li><a href="#inspirali">Inspirali</a></li>
+                <li><a href="#instituto-anima">Instituto Ânima</a></li>
             </ul>
 
             <a href="#" class="btn-download uppercase text-white text-[16px]/[1] font-amsi_narw_semibold px-8 h-[37px] flex justify-center items-center rounded-full transition-colors duration-300">Download</a>
 
-            <div class="thin-line"></div>
+            
         </nav>
+
+        <div class="thin-line"></div>
         
     </header>
-
-    <!-- Secondary -->
-    <nav class="secondary fixed z-50 w-full h-auto lg:h-[154px] transition-all duration-[400ms] flex flex-col justify-start items-start lg:justify-end lg:items-center bg-white pb-8 lg:pb-0 pt-[72px] px-6 lg:px-0 -top-full "><!-- -->
-
-    </nav>
-
 
 
     <!-- Hero -->
     <section class="relative w-full" data-color="main-rosa_B5">
-        <img src="img/hero_video.webp" class="w-full relative" alt="">
+        <!-- <img src="img/hero_video.webp" class="w-full relative" alt=""> -->
+        <video
+            class="hidden md:block w-full h-auto"
+            autoplay
+            loop
+            muted
+            playsinline
+        >
+            <source src="video/anima.mp4" type="video/mp4">
+        </video>
     </section>
 
 
     <!-- Mensagem da Administração -->
     <section class="relative w-full flex justify-end items-start pt-20 z-10" data-color="main-rosa_B5" id="mensagem-da-administracao">
-        <div class="flex-1 pr-12">
+        <div class="flex-1 pr-12 3xl:pt-14">
             <h2 class="text-rosa_B5 mb-8">Mensagem da Administração</h2>
             <p>A Ânima Educação consolida sua “Terceira Onda” de crescimento ao fortalecer um modelo que une desempenho, propósito e impacto social por meio da educação.</p>
 
@@ -72,7 +76,7 @@
             </div>
         </div>
 
-        <div class="w-[500px] xl:w-[667px] grid grid-cols-2 gap-6">
+        <div class="w-[500px] xl:w-[667px] 3xl:w-[900px] grid grid-cols-2 gap-6">
             <div>
                 <img src="img/paula.webp" class="w-full mb-4" alt="">
                 <h4 class="text-rosa_B5 uppercase">Paula Harraca</h4>
@@ -114,24 +118,24 @@
             <div class="container relative z-10">
                 <div class="flex justify-between content-stretch">
                     
-                    <div class="w-[35%] h-[534px] bg-white flex flex-col justify-start items-center rounded-3xl border border-roxo_5B p-8">
+                    <div class="w-[35%] 3xl:w-[40%] h-[534px] 3xl:h-[700px] bg-white flex flex-col justify-start items-center rounded-3xl border border-roxo_5B p-8">
                         <h3 class="text-center uppercase text-roxo_5B mb-8">Nossas marcas e instituições</h3>
 
-                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] mb-4">Marcas Especializadas</div>
-                        <img src="img/marcas-especializadas.webp" class="w-full mb-10" alt="">
+                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-4">Marcas Especializadas</div>
+                        <img src="img/marcas-especializadas.webp" class="w-full max-w-[580px] mb-10" alt="">
 
-                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] mb-4">Soluções em Educação</div>
-                        <img src="svg/logo-anima-solucoes.svg" class="w-[152px] mb-10" alt="">
+                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-4">Soluções em Educação</div>
+                        <img src="svg/logo-anima-solucoes.svg" class="w-[152px] 3xl:w-[260px] mb-10" alt="">
 
-                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] mb-7">Associação sem fins lucrativos </div>
-                        <img src="svg/logo-instituto-anima.svg" class="w-[136px]" alt="">
+                        <div class="text-paragraph font-amsi_narw_bold text-[16px]/[1.2] text-[16px]/[1.2] 3xl:text-[20px]/[1.1] mb-7">Associação sem fins lucrativos </div>
+                        <img src="svg/logo-instituto-anima.svg" class="w-[136px] 3xl:w-[280px]" alt="">
                     </div>
 
                     <div class="w-[1.5px] bg-roxo_5B"></div>
 
                     <div class="flex flex-col justify-center items-center">
                         <h3 class="text-center uppercase text-roxo_5B mb-8">Marcas com operação de ensino presencial</h3>
-                        <img src="img/map.webp" class="w-[554px]" alt="">
+                        <img src="img/map.webp" class="w-[554px] 3xl:w-[700px]" alt="">
                     </div>
 
                 </div>
@@ -253,7 +257,7 @@
                                 <div class="flex-1 pr-14">
                                     <h3 class="pr-20">Educação transformadora e de qualidade para o aluno</h3>
             
-                                    <img src="svg/ico-ods04.svg" class="size-[63px] my-4" alt="">
+                                    <img src="svg/ico-ods04.svg" class="size-[63px] 3xl:size-20 my-4" alt="">
             
                                     <h5>A Ânima lidera a personalização da aprendizagem no ensino superior, integrando qualidade de ensino, inovação, dados educacionais e um modelo pedagógico próprio para desenvolver competências completas – acadêmicas, socioemocionais e profissionais.</h5>
                                 </div>
@@ -335,8 +339,8 @@
                                     <h3 class="pr-20">Experiência e valorização do educador</h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
-                                        <img src="svg/ico-ods08.svg" class="size-[63px]" alt="">
-                                        <img src="svg/ico-ods03.svg" class="size-[63px]" alt="">
+                                        <img src="svg/ico-ods08.svg" class="size-[63px] 3xl:size-20" alt="">
+                                        <img src="svg/ico-ods03.svg" class="size-[63px] 3xl:size-20" alt="">
                                     </div>
             
                                     <h5>Acreditamos que a transformação começa com quem faz a educação acontecer. Por isso, cultivamos um ecossistema de desenvolvimento contínuo, cuidado e reconhecimento, que permite ao educador inspirar, inovar e evoluir junto com seus alunos.</h5>
@@ -421,7 +425,7 @@
                                     <h3 class="pr-20">Impacto comunitário e territorial </h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
-                                        <img src="svg/ico-ods10.svg" class="size-[63px]" alt="">
+                                        <img src="svg/ico-ods10.svg" class="size-[63px] 3xl:size-20" alt="">
                                     </div>
             
                                     <h5>A Ânima transforma suas instituições em plataformas de impacto social, conectando formação acadêmica à prestação direta de serviços essenciais em escala nacional.</h5>
@@ -502,7 +506,7 @@
                                     <h3 class="pr-20">Governança Transparente e Responsável</h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
-                                        <img src="svg/ico-ods16.svg" class="size-[63px]" alt="">
+                                        <img src="svg/ico-ods16.svg" class="size-[63px] 3xl:size-20" alt="">
                                     </div>
             
                                     <h5>A governança da Ânima evolui para um modelo em que o ESG está integrado à estratégia e se materializa em práticas que geram valor, fortalecem a confiança e impulsionam resultados sustentáveis.</h5>
@@ -584,7 +588,7 @@
                                     <h3 class="pr-20">Consciência ambiental</h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
-                                        <img src="svg/ico-ods12.svg" class="size-[63px]" alt="">
+                                        <img src="svg/ico-ods12.svg" class="size-[63px] 3xl:size-20" alt="">
                                     </div>
             
                                     <h5>Entendemos que educar também é cuidar do futuro. Integramos a sustentabilidade à operação e à formação, preparando nossos estudantes para atuar com responsabilidade diante dos desafios ambientais do nosso tempo.</h5>
@@ -663,8 +667,8 @@
                                     <h3 class="pr-20">Diversidade, equidade e inclusão</h3>
             
                                     <div class="flex justify-start items-start gap-2 my-4">
-                                        <img src="svg/ico-ods05.svg" class="size-[63px]" alt="">
-                                        <img src="svg/ico-ods10.svg" class="size-[63px]" alt="">
+                                        <img src="svg/ico-ods05.svg" class="size-[63px] 3xl:size-20" alt="">
+                                        <img src="svg/ico-ods10.svg" class="size-[63px] 3xl:size-20" alt="">
                                     </div>
             
                                     <h5>Valorizamos a pluralidade como força de transformação. Promovemos inclusão de forma estruturada e contínua, criando oportunidades reais para que diferentes vozes, histórias e talentos construam juntos um futuro mais justo.</h5>
@@ -979,6 +983,7 @@
     <!-- Instituto Ânima + CTA -->
     <section class="relative w-full bg-instituto-cta bg-no-repeat bg-cover bg-top bg-white pt-24 pb-20" data-color="main-azul_1E" id="instituto-anima">
         <div class="container">
+
             <div class="flex justify-between items-start gap-x-8">
                 <div class="flex-1">
                     <h2 class="text-azul_1E mb-8">Instituto Ânima</h2>
@@ -990,7 +995,7 @@
                     <p>A produção e a disseminação do conhecimento são pilares para a excelência acadêmica e a relevância social das Instituições de Ensino Superior (IES) da Ânima Educação. O Instituto Ânima atua de forma estratégica para fortalecer a pesquisa aplicada, promover a articulação com redes científicas e assegurar a gestão qualificada de bolsas, em parceria com o Ecossistema Ânima.</p>
                 </div>
 
-                <div class="w-[65.70%] relative min-w-0">
+                <div class="w-[65.70%] 3xl:w-[62%] relative min-w-0">
                     <div class="institutoSlider">
                         <div><img src="img/slide-inst-1.webp" alt=""></div>
                         <div><img src="img/slide-inst-2.webp" alt=""></div>
