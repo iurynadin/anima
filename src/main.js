@@ -7,13 +7,13 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel'
 
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'; // You can also use <link> for styles
 
-AOS.init({
-	duration: 450,
-	offset: 280
-});
+// AOS.init({
+// 	duration: 450,
+// 	offset: 280
+// });
 
 $(document).ready(function() {
 
@@ -27,7 +27,48 @@ $(document).ready(function() {
 
 	// initSlickSlider();
 
-	// versão desktop
+	function closeMenu() {
+		const burguer = document.querySelector('.navbar-burger');
+		const nav = document.querySelector('header nav > ul');
+		const header = document.querySelector('header');
+		const isDesktop = window.innerWidth >= 1024;
+		const isOpen = burguer.classList.contains('is-active');
+
+		if (!isOpen) {
+			console.log('abre')
+			if (isDesktop) {
+				// Remove restrição de altura e expande largura
+				nav.classList.remove('max-w-0');
+				nav.classList.add('max-w-[800px]', 'max-h-[none]');
+				header.classList.remove('w-auto');
+				header.classList.add('w-full');
+			} else {
+				// Remove restrição de largura e expande altura
+				header.classList.remove('rounded-br-[20px]');
+				nav.classList.remove('max-h-0');
+				nav.classList.add('max-h-[400px]', 'max-w-[none]','rounded-b-[20px]');
+				nav.style.width = window.innerWidth + 'px'; // aplica largura da tela
+			}
+		} else {
+			if (isDesktop) {
+				nav.classList.remove('max-w-[800px]', 'max-h-[none]');
+				nav.classList.add('max-w-0');
+				header.classList.remove('w-full');
+				header.classList.add('w-auto');
+			} else {
+				header.classList.add('rounded-br-[20px]');
+				nav.classList.remove('max-h-[400px]', 'max-w-[none]','rounded-b-[20px]');
+				nav.classList.add('max-h-0');
+				nav.style.width = ''; // limpa ao fechar
+			}
+		}
+
+		burguer.classList.toggle('is-active');
+	}
+
+	$('.navbar-burger').on('click', function () {
+		closeMenu();
+	});
 
 	$("header nav ul li a").click(function (event) {
 		let target = $(event.target).attr('href');
@@ -40,6 +81,11 @@ $(document).ready(function() {
 		// const menuRef = ($(window).width() >= 782) ? $(".secondary") : $(".secondary-mobile");
 		// const menuRef = $(".secondary");
 		// toggleMenu(menuRef);
+
+		if ($(window).width() <= 782) {
+			closeMenu();
+		}
+
 		setTimeout(() => {
 			$('html, body').animate({
 				scrollTop: $(target).offset().top - diff
@@ -56,7 +102,7 @@ $(document).ready(function() {
 		slidesToShow: 1,        /* ≥ 2xl (1440px+) */
 		slidesToScroll: 1,
 		autoplay: false,
-		speed: 600,
+		speed: 1000,
 		dots: false,
 		fade: true,
 		arrows: false,
@@ -229,43 +275,9 @@ $(document).ready(function() {
 document.addEventListener('DOMContentLoaded', () => {
 
 	
-	document.querySelector('.navbar-burger').addEventListener('click', function () {
-		const nav = document.querySelector('header nav > ul');
-		const header = document.querySelector('header');
-		const isDesktop = window.innerWidth >= 1024;
-		const isOpen = this.classList.contains('is-active');
 
-		if (!isOpen) {
-			console.log('abre')
-			if (isDesktop) {
-				// Remove restrição de altura e expande largura
-				nav.classList.remove('max-w-0');
-				nav.classList.add('max-w-[800px]', 'max-h-[none]');
-				header.classList.remove('w-auto');
-				header.classList.add('w-full');
-			} else {
-				// Remove restrição de largura e expande altura
-				header.classList.remove('rounded-br-[20px]');
-				nav.classList.remove('max-h-0');
-				nav.classList.add('max-h-[400px]', 'max-w-[none]','rounded-b-[20px]');
-				nav.style.width = window.innerWidth + 'px'; // aplica largura da tela
-			}
-		} else {
-			if (isDesktop) {
-				nav.classList.remove('max-w-[800px]', 'max-h-[none]');
-				nav.classList.add('max-w-0');
-				header.classList.remove('w-full');
-				header.classList.add('w-auto');
-			} else {
-				header.classList.add('rounded-br-[20px]');
-				nav.classList.remove('max-h-[400px]', 'max-w-[none]','rounded-b-[20px]');
-				nav.classList.add('max-h-0');
-				nav.style.width = ''; // limpa ao fechar
-			}
-		}
-
-		this.classList.toggle('is-active');
-	});
+	
+	
 
 
 
